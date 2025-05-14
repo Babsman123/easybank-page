@@ -1,0 +1,45 @@
+//COLOR VARIABLES
+$color-primary: hsl(0, 0%, 98%);
+$color-primary-dark: hsl(220, 16%, 96%);
+
+$color-white: hsl(0, 0%, 100%);
+$color-gray-blue: hsl(233, 8%, 62%);
+$color-dark-blue: hsl(233, 26%, 24%);
+$color-lime-green: hsl(136, 65%, 51%);
+$color-cyan: hsl(192, 70%, 51%);
+
+//FONT VARIABLES
+
+//RESPONSIVE BREAKPOINT
+$bp-largest: 75em; //1200px/16px (1200px)
+$bp-large: 62.5em; //1000px/16px (1000px)
+$bp-medium: 50em; //800px/16px (800px)
+$bp-small: 37.5em; //600px/16px (600px)
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //(10px / 16px) 1rem = 10px
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%; // 8px/16px 1rem = 8px
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 110vh min-content min-content min-content;
+  grid-template-columns: repeat(12, minmax(min-content, 1fr));
+  //   overflow: hidden;
+
+  @media only screen and (max-width: $bp-small) {
+    grid-template-rows: min-content;
+  }
+}

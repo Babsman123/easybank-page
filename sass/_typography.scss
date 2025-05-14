@@ -1,0 +1,111 @@
+.header {
+  &__content--text {
+    h1 {
+      span {
+        font-size: 5rem;
+        // color: $color-dark-blue;
+        letter-spacing: 0.3rem;
+      }
+
+      @media only screen and (max-width: $bp-small) {
+        span {
+          letter-spacing: 0;
+        }
+      }
+    }
+    p {
+      font-size: 1.6rem;
+      font-weight: 500;
+      // color: $color-gray-blue;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      text-align: center;
+    }
+  }
+
+  .nav {
+    &__link {
+      &,
+      &:link,
+      &:visited {
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+//REQUEST INVITE BUTTON
+.btn--request {
+  &,
+  &:link,
+  &:visited {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: $color-white;
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+}
+
+//SECTION FEATURE
+.section--1 {
+  &__header {
+    font-size: 4rem;
+    font-weight: 500;
+  }
+  &__description {
+    font-size: 1.4rem;
+    letter-spacing: 0.05rem;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 2rem;
+    }
+  }
+
+  .feature {
+    .heading--4 {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+    &__text {
+      font-size: 1.6rem;
+      font-weight: 300;
+
+      @media only screen and (max-width: $bp-small) {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+//SECTION ARTICLES
+.section--2 {
+  .article {
+    &__author {
+      font-size: 1.3rem;
+    }
+    p {
+      margin-bottom: 2rem;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+//FOOTER SECTION
+.footer {
+  &__link {
+    font-size: 1.5rem;
+
+    @media only screen and (max-width: $bp-small) {
+      font-weight: bold;
+      font-size: 1.7rem;
+    }
+  }
+  &__copyright {
+    font-size: 1.3rem;
+    color: $color-gray-blue;
+  }
+}
