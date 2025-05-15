@@ -99,6 +99,11 @@
         margin-right: 0;
       }
     }
+    &__text {
+      @media only screen and (max-width: $bp-small) {
+        margin-top: 2rem;
+      }
+    }
   }
 }
 
