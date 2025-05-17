@@ -2,15 +2,16 @@
   grid-column: 1 / -1;
   background-color: $color-primary;
   //   padding: 1rem 5rem;
-  position: relative;
+  // position: relative;
 
   &__title {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    height: 100%;
     position: relative;
+    z-index: 1;
+    height: 100%;
 
     @media only screen and (max-width: $bp-small) {
       flex-direction: column-reverse;
@@ -113,7 +114,7 @@
         margin-top: -3.5rem;
         margin-left: 10rem;
         position: relative;
-        z-index: 1000;
+        // z-index: 1000;
 
         @media only screen and (max-width: $bp-small) {
           // display: none;
@@ -138,12 +139,17 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 10rem;
+    height: 10vh;
+    padding: 0 10rem;
     z-index: 10000;
     transition: all 0.2s;
 
     &__links {
+      align-self: stretch;
+
       display: flex;
+      flex-direction: row;
+
       list-style-type: none;
 
       @media only screen and (max-width: $bp-small) {
@@ -152,12 +158,14 @@
         position: inherit;
         width: 50%;
         text-align: center;
-        top: 50%;
+        // top: 50%;
+        margin-top: 40rem;
         left: 25%;
         flex-direction: column;
-        transform: translateX(-150%);
-        // transform: translate(-50%, -50%);
-        background-color: red;
+        transform: translateX(-200%);
+        background-color: $color-white;
+        box-shadow: 0 1rem 10rem rgba(0, 0, 0, 0.2);
+        border-radius: 0.5rem;
         transition: all 0.3s;
       }
     }
@@ -209,16 +217,8 @@
     &__links {
       @media only screen and (max-width: $bp-small) {
         display: block;
-        // margin-top: 5rem;
-        // position: inherit;
-        // width: 50%;
-        // text-align: center;
-        // top: 190%;
-        // left: 50%;
-        // flex-direction: column;
-        // transform: translate(-50%, -50%);
-        // transform: translate(0);
-        background-color: red;
+        position: fixed;
+        // background-color: red;
         transition: all 0.3s ease-in-out;
       }
     }
@@ -258,6 +258,14 @@
       padding: 2rem 2rem;
     }
   }
+}
+.section {
+  transition: transform 1s, opacity 1s;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
 }
 
 //SECTION FEATURE
@@ -335,6 +343,8 @@
   display: flex;
   flex-direction: row;
   padding: 7rem 10rem;
+  position: relative;
+  z-index: 1;
 
   @media only screen and (max-width: $bp-medium) {
     padding: 2rem 2rem;

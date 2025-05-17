@@ -94,6 +94,16 @@
   }
 }
 
+.heading--5 {
+  a {
+    text-decoration: none;
+
+    &:hover {
+      color: $color-lime-green;
+    }
+  }
+}
+
 //FOOTER SECTION
 .footer {
   &__link {
