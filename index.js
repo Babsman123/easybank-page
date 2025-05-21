@@ -62,10 +62,14 @@ menuClose.addEventListener("click", () => {
   navLinks.addEventListener("transitionend", function resetPosition() {
     navLinks.style.transition = "none";
     navLinks.style.transform = `translateX(-200%)`;
+    navLinks.style.opacity = "0";
+    navLinks.style.visibility = "hidden";
 
     void navLinks.offsetWidth;
 
     navLinks.style.transition = "transform 0.4s ease";
+    navLinks.style.opacity = "1";
+    navLinks.style.visibility = "visiblegit add";
 
     header.classList.remove("header-mobile");
 
