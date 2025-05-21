@@ -69,7 +69,7 @@ menuClose.addEventListener("click", () => {
 
     navLinks.style.transition = "transform 0.4s ease";
     navLinks.style.opacity = "1";
-    navLinks.style.visibility = "visiblegit add";
+    navLinks.style.visibility = "visible";
 
     header.classList.remove("header-mobile");
 
