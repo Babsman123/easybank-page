@@ -27,6 +27,7 @@ $bp-small: 37.5em; //600px/16px (600px)
 html {
   box-sizing: border-box;
   font-size: 62.5%; //(10px / 16px) 1rem = 10px
+  font-family: "Public Sans", sans-serif;
 
   @media only screen and (max-width: $bp-largest) {
     font-size: 50%; // 8px/16px 1rem = 8px
